@@ -1,3 +1,5 @@
+/* base.css - for mobile devices */
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
 body {
@@ -29,32 +31,47 @@ header span {
     font-weight: 600;
     align-items: center;
 }
+nav {
+    background-color: #5a5a5a;
+}
 
-nav ul {
+#hamburger::before {
+	content: "☰";
+}
+
+#hamburger {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: 1rem;
+}
+
+.nav.active {
     display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    background-color: #7f7f7f;
 }
 
-nav ul li {
-    margin: 0;
+ul.navMenu {
+    display: none;
+    list-style-type: none;
+    padding: 1rem;
+    margin-top: 0rem;
+    margin-bottom: 1rem;
 }
 
+li.active a {
+    background-color: rgba(0,0,0,0.2);
+}
 nav ul li a {
+    font-size: 1.5rem;
     display: block;
     padding: 1rem;
     color: #fff;
     text-decoration: none;
     text-align: center;
-}
-
-nav ul li a:hover,
-nav ul li a:focus,
-nav ul li a:active {
-    background-color: #000;
 }
 
 main {
@@ -120,4 +137,62 @@ footer span#year {
 footer #lastModified {
     color: #ffc107;
     margin-top: 5px;
+}
+/*CSS for the active button*/
+ul.navMenu.active {
+    display: block;
+    list-style-type: none;
+}
+.hamburger::after {
+    content: '\2630';
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+#hamburger::before {
+	content: "☰";
+    color: #fff;
+}
+
+#hamburger.active::before {
+	content: "X";
+}
+
+hamburger.active::after {
+    display: none;
+}
+
+/*Dark Mode*/
+
+#mode {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: inherit;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+header.dark-mode, nav.dark-mode, footer.dark-mode {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+card.dark-mode {
+    background-color: #121212;
+    columns: fff;
+}
+.card.dark-mode {
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 4);
+}
+
+.card.dark-mode h2 {
+    background-color: #444;
 }

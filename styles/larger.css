@@ -1,26 +1,40 @@
+/* larger.css - for wider screens */
+
 @media (min-width: 768px) {
 
     header {
         text-align: center;
-        /* Center-align the content */
     }
 
     header img {
         display: block;
-        /* Make the image a block element */
         margin: 0 auto;
-        /* Center the image horizontally */
     }
 
     header span {
-        margin: 0 auto;
+        margin: auto auto;
+    }
+
+    #hamburger {
+        display: none;
     }
 
     /* Navigation Flexbox */
-    nav ul {
+    ul.navMenu, ul.navMenu.active {
+        display: flex;
         flex-direction: row;
+        box-shadow: none;
+        width: auto;
         justify-content: space-around;
     }
+
+    
+    nav ul li a:hover,
+    nav ul li a:focus,
+    nav ul li a:active {
+    background-color: rgba(255,255, 255, 4)
+    }
+    
 
     /* Main Section Grid */
     main {
@@ -35,7 +49,6 @@
     main h1 {
         grid-area: heading;
         text-align: center;
-        /* Center the text */
     }
 
     .card:nth-of-type(1) {

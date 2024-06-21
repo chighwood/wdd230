@@ -12,20 +12,21 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
     <link rel="icon" href="favicon.ico">
-    <meta property="og:title" content="" />
-    <meta property="og:type" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:url" content="" />
+    <meta property="og:title" content="WDD Home Page" />
+    <meta property="og:type" content="Home page for the WDD230 Block 2 Class with Chamber Site" />
+    <meta property="og:image" content="https://wimberley.org/wp-content/uploads/wimberleyWelcome.jpg" />
+    <meta property="og:url" content="https://chighwood.github.io/wdd230/" />
 </head>
-
 <body>
     <header>
         <img src="images/School.jpg" alt="My Picture">
         <span>Collin Highwood</span>
     </header>
+    <button id="mode" aria-label="Dark Mode">🕶️</button>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
+        <button id="hamburger"></button>
+        <ul class="navMenu">
+            <li class="active"><a href="index.html">Home</a></li>
             <li><a href="chamber.html">Chamber</a></li>
             <li><a href="week01/site-plan.html">Site Plan</a></li>
             <li><a href="form.html">Form</a></li>
@@ -61,7 +62,9 @@
         <p id="lastModified"></p>
     </footer>
 
-    <script src="scripts/getDates.js"></script>
+    <script src="scripts/getDates.js"></script> 
+    <script src="scripts/darkMode.js"></script>
+
 </body>
 
 </html>
