@@ -20,7 +20,8 @@
     }
 
     /* Navigation Flexbox */
-    ul.navMenu, ul.navMenu.active {
+    ul.navMenu,
+    ul.navMenu.active {
         display: flex;
         flex-direction: row;
         box-shadow: none;
@@ -28,13 +29,13 @@
         justify-content: space-around;
     }
 
-    
+
     nav ul li a:hover,
     nav ul li a:focus,
     nav ul li a:active {
-    background-color: rgba(255,255, 255, 4)
+        background-color: rgba(0, 0, 0, .5)
     }
-    
+
 
     /* Main Section Grid */
     main {

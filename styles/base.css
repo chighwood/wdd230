@@ -31,12 +31,13 @@ header span {
     font-weight: 600;
     align-items: center;
 }
+
 nav {
     background-color: #5a5a5a;
 }
 
 #hamburger::before {
-	content: "☰";
+    content: "☰";
 }
 
 #hamburger {
@@ -63,8 +64,9 @@ ul.navMenu {
 }
 
 li.active a {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0, 0, 0, 0.2);
 }
+
 nav ul li a {
     font-size: 1.5rem;
     display: block;
@@ -85,7 +87,7 @@ main {
 .card {
     margin-bottom: 1rem;
     padding: 1rem;
-    background-color: #e7eef7;
+    background-color: #e9eef5;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -138,11 +140,13 @@ footer #lastModified {
     color: #ffc107;
     margin-top: 5px;
 }
+
 /*CSS for the active button*/
 ul.navMenu.active {
     display: block;
     list-style-type: none;
 }
+
 .hamburger::after {
     content: '\2630';
     font-size: 1.5rem;
@@ -150,12 +154,12 @@ ul.navMenu.active {
 }
 
 #hamburger::before {
-	content: "☰";
+    content: "☰";
     color: #fff;
 }
 
 #hamburger.active::before {
-	content: "X";
+    content: "X";
 }
 
 hamburger.active::after {
@@ -180,14 +184,18 @@ body.dark-mode {
     color: #e0e0e0;
 }
 
-header.dark-mode, nav.dark-mode, footer.dark-mode {
+header.dark-mode,
+nav.dark-mode,
+footer.dark-mode {
     background-color: #1e1e1e;
     color: #e0e0e0;
 }
+
 card.dark-mode {
     background-color: #121212;
     columns: fff;
 }
+
 .card.dark-mode {
     background-color: #333;
     box-shadow: 0 0 10px rgba(0, 0, 0, 4);
