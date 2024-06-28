@@ -184,7 +184,7 @@ ul.navMenu.active {
     right: 1rem;
     font-size: 2rem;
     cursor: pointer;
-    background: none;
+    background: rgba(255, 255, 255, 0.3);
     border: none;
     color: inherit;
 }
