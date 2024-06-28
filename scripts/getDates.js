@@ -10,3 +10,19 @@ hamburgerBtn.addEventListener("click", () => {
     navMenu.classList.toggle("active");
     hamburgerBtn.classList.toggle("active");
 });
+
+// Number of Visits
+
+const visitsDisplay = document.querySelector(".visits");
+
+let numberVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
+
+if (numberVisits !== 0) {
+	visitsDisplay.textContent = numberVisits;
+} else {
+	visitsDisplay.textContent = `Welcome to my Home Page!`;
+}
+numberVisits++;
+
+localStorage.setItem("numberVisits-ls", numberVisits);
+

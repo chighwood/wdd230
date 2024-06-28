@@ -36,35 +36,45 @@
         background-color: rgba(0, 0, 0, .5)
     }
 
-
     /* Main Section Grid */
     main {
+        max-width: 1400px;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
-        grid-template-areas:
-            "heading heading"
-            "card1 card2";
     }
 
     main h1 {
-        grid-area: heading;
         text-align: center;
-    }
-
-    .card:nth-of-type(1) {
-        grid-area: card1;
-    }
-
-    .card:nth-of-type(2) {
-        grid-area: card2;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.5); /* Optional: To make the heading more readable over the image */
+        padding: 0.5rem; /* Optional: Padding around the heading text */
+        grid-column: span 2;
+        margin-top: 0;
     }
 
     .card {
-        margin: 0;
+        margin: 1rem;
     }
 
     .course-links li {
-        margin-bottom: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero {
+        width: 100%;
+        height: auto;
+        grid-column: span 2;
+    }
+    .hero p {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .google {
+        grid-column: span 2;
     }
 }
