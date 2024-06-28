@@ -15,7 +15,7 @@ hamburgerBtn.addEventListener("click", () => {
 
 const visitsDisplay = document.querySelector(".visits");
 
-let numberVisits = Number(window.localStorage.getItem("numVisits-ls")) || 0;
+let numberVisits = Number(window.localStorage.getItem("numberVisits-ls")) || 0;
 
 if (numberVisits !== 0) {
 	visitsDisplay.textContent = numberVisits;

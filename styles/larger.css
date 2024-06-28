@@ -70,10 +70,11 @@
     }
 
     .card {
-        width: 90%;
+        width: 100%;
     }
 
     .google {
         grid-column: span 2;
+        height:40rem;
     }
 }
