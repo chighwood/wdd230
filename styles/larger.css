@@ -46,8 +46,8 @@
     main h1 {
         text-align: center;
         position: relative;
-        background-color: rgba(255, 255, 255, 0.5); /* Optional: To make the heading more readable over the image */
-        padding: 0.5rem; /* Optional: Padding around the heading text */
+        background-color: rgba(255, 255, 255, 0.5); 
+        padding: 0.5rem; 
         grid-column: span 2;
         margin-top: 0;
     }

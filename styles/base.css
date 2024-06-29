@@ -11,6 +11,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header */
 header {
     display: flex;
     align-items: center;
@@ -32,12 +33,9 @@ header span {
     align-items: center;
 }
 
+/* Navigation */
 nav {
     background-color: #5a5a5a;
-}
-
-#hamburger::before {
-    content: "☰";
 }
 
 #hamburger {
@@ -51,16 +49,24 @@ nav {
     padding: 1rem;
 }
 
-.nav.active {
-    display: flex;
+#hamburger::before {
+    content: "☰";
+    color: #fff;
+}
+
+#hamburger.active::before {
+    content: "X";
 }
 
 ul.navMenu {
     display: none;
     list-style-type: none;
     padding: 1rem;
-    margin-top: 0rem;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+ul.navMenu.active {
+    display: block;
 }
 
 li.active a {
@@ -76,15 +82,19 @@ nav ul li a {
     text-align: center;
 }
 
+/* Main Content */
 main {
     max-width: 500px;
     margin: 1rem auto;
     padding: 1rem;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
 }
 
-.card1 .card2 {
+.card1, .card2 {
     margin-bottom: 1rem;
     padding: 1rem;
     background-color: #e9eef5;
@@ -99,15 +109,15 @@ main {
     border-radius: 5px;
 }
 
+/* Course Links */
 .course-links {
     list-style-type: none;
     padding: 10px;
 }
 
 .course-links li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
-
 
 .course-links li a {
     color: #205081;
@@ -119,7 +129,7 @@ main {
     font-size: larger;
 }
 
-/*Google Add*/
+/* Google Ad */
 .google {
     position: relative;
     display: block;
@@ -127,6 +137,7 @@ main {
     height: 25rem;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 1rem;
@@ -151,33 +162,7 @@ footer #lastModified {
     margin-top: 5px;
 }
 
-/*CSS for the active button*/
-ul.navMenu.active {
-    display: block;
-    list-style-type: none;
-}
-
-.hamburger::after {
-    content: '\2630';
-    font-size: 1.5rem;
-    color: #fff;
-}
-
-#hamburger::before {
-    content: "☰";
-    color: #fff;
-}
-
-#hamburger.active::before {
-    content: "X";
-}
-
-.hamburger.active::after {
-    display: none;
-}
-
-/*Dark Mode*/
-
+/* Dark Mode */
 #mode {
     position: absolute;
     top: 1rem;
@@ -191,10 +176,10 @@ ul.navMenu.active {
 
 body.dark-mode {
     background-color: #121212;
-    color: #121212;
+    color: #fff;
 }
 
-main.card.dark-mode {
+main.dark-mode {
     background-color: #5a5a5a;
 }
 
@@ -202,16 +187,10 @@ header.dark-mode,
 nav.dark-mode,
 footer.dark-mode {
     background-color: #1e1e1e;
-    color: #121212;
+    color: #fff;
 }
 
-/* Main Section Grid */
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-}
-
+/* Hero Section */
 .hero {
     position: relative;
 }
@@ -222,36 +201,25 @@ main {
     display: block;
 }
 
+.hero p {
+    position: absolute;
+    top: 0;
+    left: 20%;
+    right: 20%;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
 main h1 {
     text-align: center;
     position: relative;
     z-index: 1;
-    background-color: rgba(255, 255, 255, 0.5); /* Optional: To make the heading more readable over the image */
-    padding: 0.5rem; /* Optional: Padding around the heading text */
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem;
 }
 
-.card1, .card2 {
-    margin: 0;
-    background: rgba(0, 0, 0, 0.1)
-}
-
-.course-links li {
-    margin-bottom: 1rem;
-
-}
-
+/* Miscellaneous */
 .visits {
     font-size: large;
 }
-
-/*Temple Name*/
-
-    .hero p {
-        position: absolute;
-        top: 0;
-        left: 20%;
-        right: 20%;
-        padding: 1.5rem;
-        background: rgba(255, 255, 255, 0.5);
-        text-align: center;
-    }

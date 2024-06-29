@@ -1,15 +1,27 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    width: auto;
     font-family: 'Open Sans', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
     color: #333;
     line-height: 1.6;
-    display: grid;
-    grid-column: auto auto 1fr auto;
 }
 
+/* Layout */
+.page-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+}
+
+/* Header */
 header {
     display: flex;
     align-items: center;
@@ -17,26 +29,19 @@ header {
     background-color: navy;
     color: #fff;
     justify-content: space-between;
-    padding-right: 3rem;
 }
 
 header img {
-    max-height: 200px;
-    max-width: 200px;
-    border-radius: 1%;
-    margin-right: 1rem;
+    max-height: 100px;
+    max-width: 100px;
 }
 
 header span {
-    font-size: 3rem;
+    font-size: 1rem;
     font-weight: 600;
-    align-items: center;
 }
 
-#hamburger::before {
-	content: "☰";
-}
-
+/* Hamburger Menu */
 #hamburger {
     font-size: 2rem;
     background: none;
@@ -48,6 +53,19 @@ header span {
     padding: 1rem;
 }
 
+#hamburger::before {
+    content: "☰";
+}
+
+#hamburger.active::before {
+    content: "X";
+}
+
+/* Navigation */
+nav {
+    background-color: tan;
+}
+
 .nav.active {
     display: flex;
 }
@@ -56,10 +74,27 @@ ul.navMenu {
     display: none;
     list-style-type: none;
     padding: 1rem;
-    margin-top: 0rem;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
 }
 
+ul.navMenu.active {
+    display: block;
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+li.active a {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Main Content */
 main {
     max-width: auto;
     margin: 1rem;
@@ -68,16 +103,20 @@ main {
     background-color: tan;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 .hero {
     width: 100%;
 } 
+
 .card1, .card2 {
     margin-bottom: 1rem;
     padding: 1rem;
-    background-color: #e9eef5;
+    background-color: #e5e7eb;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+/* Company Spotlights */
 .company1, .company2, .company3 {
     margin: 1rem;
     padding: 1rem;
@@ -86,6 +125,7 @@ main {
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .spotlights h4 {
     font-size: 1.5rem;
     font-weight: 200;
@@ -115,3 +155,72 @@ footer #lastModified {
     color: #d8c13f;
     margin-top: 5px;
 }
+
+/* Discovery Page */
+body {
+    background-color: #ecece8;
+}
+
+/* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+figure {
+    position: relative;
+    margin: 0;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    font-size: 1em;
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+.image-container:hover figcaption {
+    background: rgba(0, 0, 0, 0.8);
+}
+/* Visit Message */
+.sidebar {
+    background-color: tan;
+    margin: 15px;
+    text-align: center;
+    margin: 20px; 
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+    text-align: center; 
+}
+
+    #visit-message {
+        font-size: 1.2rem; 
+        font-weight: bold;
+        color: #333;
+        margin: 4rem;
+        background-color: rgba(0, 0, 0, .1);
+        padding: 10px;
+    }
