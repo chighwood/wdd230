@@ -106,9 +106,10 @@ main {
 
 .hero {
     width: 100%;
-} 
+}
 
-.card1, .card2 {
+.card1,
+.card2 {
     margin-bottom: 1rem;
     padding: 1rem;
     background-color: #e5e7eb;
@@ -117,7 +118,9 @@ main {
 }
 
 /* Company Spotlights */
-.company1, .company2, .company3 {
+.company1,
+.company2,
+.company3 {
     margin: 1rem;
     padding: 1rem;
     background-color: navy;
@@ -205,18 +208,19 @@ figcaption {
 .image-container:hover figcaption {
     background: rgba(0, 0, 0, 0.8);
 }
+
 /* Visit Message */
 .sidebar {
     background-color: tan;
     border: 1px solid #ccc;
-    text-align: center; 
+    text-align: center;
 }
 
-    #visit-message {
-        font-size: 1.2rem; 
-        font-weight: bold;
-        color: #333;
-        margin: 4rem;
-        background-color: rgba(0, 0, 0, .1);
-        padding: 10px;
-    }
+#visit-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 4rem;
+    background-color: rgba(0, 0, 0, .1);
+    padding: 10px;
+}
