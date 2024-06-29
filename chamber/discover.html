@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Page</title>
+    <meta name="author" content="Collin Highwood">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+</head>
+
+<body>
+    <header>
+        <img src="images/boot1.jpg" alt="boot 1">
+        <span>Wimberley Chamber of Commerce</span>
+        <img src="images/boot2.jpeg" alt="boot 2">
+    </header>
+    <nav>
+        <button id="hamburger"></button>
+        <ul class="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li class="active"><a href="chamber/discovery.html">Discovery</a></li>
+            <li><a href="wdd/week1/site-plan.html">Site Plan</a></li>
+            <li><a href="directory.html">Directory</a></li>
+        </ul>
+    </nav>
+
+    <img class="hero" src="images/bluebonnet-meadow.jpeg" alt="hero image">
+    <h2>Wimberley Chamber of Commerce</h2>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="info">
+                <h2>Information</h2>
+                <div class="chamber-card1">
+                    <h3>Calender</h3>
+                    <iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&ctz=America%2FChicago&bgcolor=%23ffffff&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=N2E5NzQ3NDBlNDg5MjdlNWIwNmRmZjJlYWJiYTE0YTllMmVlZGIzZTUwOTNhYjhkYzUyZTkzY2UxYjBkYWM2ZEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23B39DDB&color=%230B8043" style="border:solid 1px #777" width="300" height="300" frameborder="0" scrolling="no"></iframe>
+                </div>
+                <div class="chamber-card2">
+                    <h3>Events</h3>
+                    <img src="images/wimberly-dates.png" alt="market-days">
+                </div>
+                    <div class="visit-message" id="visit-message">
+                        
+                    </div>
+            </div>
+        </aside>
+
+        <main class="main-chamber">
+
+            <div class="gallery">
+                <figure>
+                    <figcaption>Blue Willow Wimberley Square</figcaption>
+                    <img src="images/Blue-Willow-Wimberley-Square.jpg" alt="Blue Willow Wimberley Square" loading="lazy">
+                </figure>
+                <figure>
+                    <figcaption>Floating River</figcaption>
+                    <img src="images/floating-river.jpg" alt="Floating River" loading="lazy">
+                </figure>
+                <figure>
+                    <figcaption>Opera House</figcaption>
+                    <img src="images/opera-house.jpg" alt="Opera House" loading="lazy">
+                </figure>
+                <figure>
+                    <figcaption>Wimberley Food</figcaption>
+                    <img src="images/wimberley-food.jpg" alt="Wimberley Food" loading="lazy">
+                </figure>
+                <figure>
+                    <figcaption>Wimberley Glass</figcaption>
+                    <img src="images/wimberley-glass.webp" alt="Wimberley Glass" loading="lazy">
+                </figure>
+                <figure>
+                    <figcaption>Market 1.1</figcaption>
+                    <img src="images/market-1.1.jpg" alt="Market 1.1" loading="lazy">
+                </figure>
+            </div>
+        </main>
+        
+        
+    </div>
+    <footer>
+        <p>&copy; <span id="year"></span> Collin Highwood, WDD 230 Chamber of Commerce Page</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/discovery.js"></script>
+
+
+
+</body>
+
+</html>
