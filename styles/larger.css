@@ -32,7 +32,7 @@
     nav ul li a:hover,
     nav ul li a:focus,
     nav ul li a:active {
-        background-color: rgba(0, 0, 0, .5)
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
     /* Main Section Grid */
@@ -46,18 +46,10 @@
     main h1 {
         text-align: center;
         position: relative;
-        background-color: rgba(255, 255, 255, 0.5); 
-        padding: 0.5rem; 
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 0.5rem;
         grid-column: span 2;
         margin-top: 0;
-    }
-
-    .card {
-        margin: 1rem;
-    }
-
-    .course-links li {
-        margin-bottom: 1.5rem;
     }
 
     .hero {
@@ -65,16 +57,22 @@
         height: auto;
         grid-column: span 2;
     }
+
     .hero p {
         font-size: 2rem;
     }
 
     .card {
         width: 100%;
+        margin: 1rem;
+    }
+
+    .course-links li {
+        margin-bottom: 1.5rem;
     }
 
     .google {
         grid-column: span 2;
-        height:40rem;
+        height: 40rem;
     }
 }

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Form</title>
+    <meta name="author" content="Collin Highwood">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="WDD Home Page">
+    <meta property="og:type" content="Home page for the WDD230 Block 2 Class with Chamber Site">
+    <meta property="og:image" content="https://wimberley.org/wp-content/uploads/wimberleyWelcome.jpg">
+    <meta property="og:url" content="https://chighwood.github.io/wdd230/">
+
+</head>
+
+<body>
+    <header>
+        <img src="images/School.webp" alt="My Picture">
+        <span>Collin Highwood</span>
+    </header>
+    <button id="mode" aria-label="Dark Mode">🕶️</button>
+    <nav>
+        <button id="hamburger"></button>
+        <ul class="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chamber/index.html">Chamber of Commerce</a></li>
+            <li><a href="week01/site-plan.html">Site Plan</a></li>
+            <li class="active"><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Form Submission Confirmation</h2>
+        <p class="record-p">Your form has been successfully submitted.</p>
+    </main>
+    
+    <footer>
+        <p>&copy; <span id="year"></span> Collin Highwood, United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"> </script>
+
+</body>
+</html>

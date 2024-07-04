@@ -1,0 +1,343 @@
+/* base.css - for mobile devices */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #205081;
+    color: #fff;
+    justify-content: space-between;
+}
+
+header img {
+    max-height: 200px;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+header span {
+    font-size: 2.5rem;
+    font-weight: 600;
+    align-items: center;
+}
+
+/* Navigation */
+nav {
+    background-color: #5a5a5a;
+}
+
+#hamburger {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    padding: 1rem;
+}
+
+#hamburger::before {
+    content: "☰";
+    color: #fff;
+}
+
+#hamburger.active::before {
+    content: "X";
+}
+
+ul.navMenu {
+    display: none;
+    list-style-type: none;
+    padding: 1rem;
+    margin: 0 0 1rem 0;
+}
+
+ul.navMenu.active {
+    display: block;
+}
+
+li.active a {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+nav ul li a {
+    font-size: 1.5rem;
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #205081;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    margin: 0.2rem 0;
+}
+
+footer span#year {
+    font-weight: 700;
+    margin-right: 5px;
+}
+
+footer #lastModified {
+    color: #ffc107;
+    margin-top: 5px;
+}
+
+/* Dark Mode */
+#mode {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    color: inherit;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #fff;
+}
+
+main.dark-mode {
+    background-color: #5a5a5a;
+}
+
+header.dark-mode,
+nav.dark-mode,
+footer.dark-mode {
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+main {
+    max-width: 1400px;
+    gap: 1rem;
+    grid: 1fr;
+}
+
+main h2 {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 0.5rem;
+    margin-top: 0;
+    grid-column: span 1;
+}
+
+/* Form CSS */
+form {
+    width: 400px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+
+form>div {
+    margin-bottom: 10px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="password"],
+form input[type="email"],
+form input[type="range"],
+form button[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form .note {
+    font-size: 12px;
+    color: #666;
+}
+
+form button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.record-p {
+    margin-left: 10%;
+    margin-right: 10%;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.3);
+    border: #121212 solid 1px;
+    padding: 20px;
+
+}
+
+/* larger.css - for wider screens */
+
+@media (min-width: 768px) {
+
+    header {
+        text-align: center;
+    }
+
+    header img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    header span {
+        margin: auto auto;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    /* Navigation Flexbox */
+    ul.navMenu,
+    ul.navMenu.active {
+        display: flex;
+        flex-direction: row;
+        box-shadow: none;
+        width: auto;
+        justify-content: space-around;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus,
+    nav ul li a:active {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Main Section Grid */
+    main {
+        max-width: 1500px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    main h1 {
+        text-align: center;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 0.5rem;
+        grid-column: span 2;
+        margin-top: 0;
+    }
+
+    form {
+        width: 400px;
+        /* Adjust width as needed */
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        margin: auto;
+        margin-bottom: 30px;
+
+    }
+
+    form>div {
+        margin-bottom: 10px;
+    }
+
+    form label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"],
+    form input[type="range"],
+    form button[type="submit"] {
+        width: 100%;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    form .note {
+        font-size: 12px;
+        color: #666;
+    }
+
+    form button[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    form button[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    /* Record CSS */
+
+    .record-p {
+        margin-left: 30%;
+        margin-right: 30%;
+        display: block;
+        text-align: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.3);
+        border: #121212 solid 2px;
+        padding: 30px;
+
+    }
+}
