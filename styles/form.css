@@ -138,7 +138,6 @@ footer.dark-mode {
 main {
     max-width: 1400px;
     gap: 1rem;
-    grid: 1fr;
 }
 
 main h2 {
