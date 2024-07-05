@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
@@ -223,4 +228,111 @@ figcaption {
     margin: 4rem;
     background-color: rgba(0, 0, 0, .1);
     padding: 10px;
+}
+
+/*Join Styling*/
+
+.join fieldset {
+    margin: 2rem 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: .5rem 2%;
+}
+
+.join legend {
+    color: black;
+    padding: 0 .5rem;
+}
+
+.join label {
+    display: block;
+    padding-top: 1rem;
+    color: black;
+    font-size: .9rem;
+}
+
+.join div {
+    padding-top: 1rem;
+    color: #445ba9;
+    font-size: .9rem;
+}
+
+.join input[type="text"],
+.join input[type="tel"],
+.join input[type="email"],
+.join select,
+.join textarea {
+    background-color: #eee;
+    display: block;
+    border: solid 1px #999;
+    border-radius: 6px;
+    padding: .75rem;
+    color: #555;
+    width: 100%;
+    max-width: 400px;
+    appearance: none;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#membership-form {
+    flex: 1; 
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-right: 20px; 
+}
+
+#membership-benefits {
+    width: 100%; 
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+.join input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(navy, red);
+    color: #fff;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 96%;
+    cursor: pointer;
+    max-width: 400px;
+    box-shadow: 1px 1px 4px #999;
+}
+
+.join input:required {
+    border-right: solid 5px red;
+}
+
+.join input:required:valid {
+    border-bottom: solid 5px green;
+}
+
+/* Styling for thank you page */
+#thank-you {
+    text-align: center;
+    padding: 20px;
+}
+
+.join {
+    max-width: 400px;
+    width: 100%;
+    background-color: tan;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+    width: 30%; /* Width of the sidebar */
+    max-width: 300px;
+    margin-left: 20px; /* Space between form and sidebar */
+    background-color: tan;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
