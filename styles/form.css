@@ -191,7 +191,7 @@ form .note {
 }
 
 form button[type="submit"] {
-    background-color: #007bff;
+    background-color: #0c56a5;
     color: #fff;
     border: none;
     cursor: pointer;
@@ -312,7 +312,7 @@ form button[type="submit"]:hover {
     }
 
     form button[type="submit"] {
-        background-color: #007bff;
+        background-color: #0c56a5;
         color: #fff;
         border: none;
         cursor: pointer;
