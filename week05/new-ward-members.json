@@ -1,0 +1,23 @@
+{
+    "familyName": "Highwood",
+    "moveInDate": "2024-07-11",
+    "numberOfPeople": 3,
+    "visitedByBishopric": true,
+    "familyMembers": [
+        {
+            "name": "Collin Highwood",
+            "gender": "Male",
+            "birthdate": "1996-06-29"
+        },
+        {
+            "name": "Amanda Highwood",
+            "gender": "Female",
+            "birthdate": "1992-01-29"
+        },
+        {
+            "name": "Tucker Highwood ",
+            "gender": "Male",
+            "birthdate": "2020-07-05"
+        }
+    ]
+}

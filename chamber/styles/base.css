@@ -284,14 +284,14 @@ textarea {
 }
 
 #membership-form {
-    flex: 1; 
+    flex: 1;
     background-color: #f9f9f9;
     border-radius: 8px;
     padding: 20px;
 }
 
 #membership-benefits {
-    width: 100%; 
+    width: 100%;
     background-color: #f0f0f0;
     border-radius: 8px;
     padding: 20px;
@@ -319,9 +319,9 @@ textarea {
 }
 
 /* Styling for thank you page */
-#thank-you {
+.main p {
     text-align: center;
-    padding: 20px;
+    padding: 5rem;
 }
 
 .join {
@@ -334,9 +334,11 @@ textarea {
 }
 
 .description {
-    width: 30%; /* Width of the sidebar */
+    width: 30%;
+    /* Width of the sidebar */
     max-width: 300px;
-    margin-left: 20px; /* Space between form and sidebar */
+    margin-left: 20px;
+    /* Space between form and sidebar */
     background-color: tan;
     padding: 1rem;
     border-radius: 8px;
