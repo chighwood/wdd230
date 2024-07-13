@@ -1,5 +1,4 @@
-/* base.css - for mobile devices */
-
+/* styles.css */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
 body {
@@ -94,15 +93,17 @@ main {
     gap: 1rem;
 }
 
-.card1, .card2 {
-    margin-bottom: 1rem;
-    padding: 1rem;
+.card1,
+.card2 {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
     background-color: #e9eef5;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.card1 h2, .card2 h2 {
+.card1 h2,
+.card2 h2 {
     background-color: #205081;
     color: #fff;
     padding: 0.5rem;
@@ -224,3 +225,8 @@ main h1 {
     font-size: large;
 }
 
+/* Weather Icon */
+#weather-icon img {
+    width: 100px;
+    height: 100px;
+}

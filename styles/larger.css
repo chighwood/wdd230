@@ -62,8 +62,8 @@
         font-size: 2rem;
     }
 
-    .card {
-        width: 100%;
+    .card1, .card2 {
+        width: 90%;
         margin: 1rem;
     }
 
