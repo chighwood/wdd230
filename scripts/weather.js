@@ -21,12 +21,9 @@ fetch(apiUrl)
             });
         }
 
-        let capitalizedDesc = capitalizeWords(weatherDesc);
+        let capitalizedDesc = capitalizeWords(weatherDesc);        
 
-        description.innerText = `Description: ${capitalizedDesc}`;        
-
-        temperature.innerText = `Temperature: ${temp}°F`;
-        description.innerText = `Description: ${capitalizedDesc}`;
+        temperature.innerText = `Temperature: ${temp}°F - ${capitalizedDesc}`;
         weatherIcon.innerHTML = `<img src="${iconUrl}" alt="${weatherDesc}">`;
     })
     .catch(error => console.error('Error fetching the weather data:', error));
