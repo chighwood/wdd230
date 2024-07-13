@@ -1,7 +1,7 @@
 
 const apiKey = '69f0c9ec198f3702b457ba969bcf2b7c';
 const city = 'Wimberley';
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
 
 fetch(apiUrl)
     .then(response => response.json())
@@ -15,8 +15,18 @@ fetch(apiUrl)
         const iconCode = data.weather[0].icon;
         const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
 
-        temperature.innerText = `Temperature: ${temp}°C`;
-        description.innerText = `Description: ${weatherDesc}`;
+        function capitalizeWords(str) {
+            return str.replace(/\b\w/g, function(char) {
+                return char.toUpperCase();
+            });
+        }
+
+        let capitalizedDesc = capitalizeWords(weatherDesc);
+
+        description.innerText = `Description: ${capitalizedDesc}`;        
+
+        temperature.innerText = `Temperature: ${temp}°F`;
+        description.innerText = `Description: ${capitalizedDesc}`;
         weatherIcon.innerHTML = `<img src="${iconUrl}" alt="${weatherDesc}">`;
     })
     .catch(error => console.error('Error fetching the weather data:', error));

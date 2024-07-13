@@ -102,6 +102,10 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+.card2 {
+    text-align: center;
+}
+
 .card1 h2,
 .card2 h2 {
     background-color: #205081;
