@@ -27,7 +27,7 @@ footer {
 /* Card Container */
 #cards {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1rem;
     padding: 1rem;
 }
@@ -56,11 +56,4 @@ img {
 
 p {
     margin: 0.5rem 0;
-}
-
-/* Responsive Styles for Desktop View */
-@media screen and (min-width: 768px) {
-    #cards {
-        grid-template-columns: repeat(4, 1fr);
-    }
 }
