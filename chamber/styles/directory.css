@@ -1,0 +1,17 @@
+/* Individual Card Styles */
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+  }
+  
+.members-list {
+/* Define styles for list view */
+}
+
+.member-card {
+background-color: #f0f0f0;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}

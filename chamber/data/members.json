@@ -1,0 +1,68 @@
+{
+    "members": [
+      {
+        "name": "Blanco Brew",
+        "address": "14200 Ranch Road 12 Wimberley, TX 78676",
+        "phone": "830-660-7767",
+        "website": "https://blancobrew.com",
+        "image": "placeholder.png",
+        "membershipLevel": "Gold",
+        "otherInfo": ""
+      },
+      {
+        "name": "Chill's of the Creek",
+        "address": "14004 Ranch Road 12 Wimberley, TX 78676",
+        "phone": "512-847-6060",
+        "website": "https://chillsonthecreek.com/",
+        "image": "companyb.png",
+        "membershipLevel": "Silver",
+        "otherInfo": ""
+      },
+      {
+        "name": "Creekhouse Kitchen & Bar",
+        "address": "14015 Ranch Road 12 Wimberley, TX 78676",
+        "phone": "512-722-3394",
+        "website": "www.creekhousewtx.com",
+        "image": "companyc.png",
+        "membershipLevel": "Bronze",
+        "otherInfo": ""
+      },
+      {
+        "name": "Driftwood Estate Winery",
+        "address": "4001 Elder Hill Road Driftwood, TX 78619",
+        "phone": "512-692-6229",
+        "website": "https://www.driftwoodwine.com/",
+        "image": "companyd.png",
+        "membershipLevel": "Silver",
+        "otherInfo": ""
+      },
+      {
+        "name": "Durango's Authentic Mexican Restaurant",
+        "address": "401 FM 2325 Wimberley, TX 78676",
+        "phone": "512-847-3473",
+        "website": "http://www.companyb.com",
+        "image": "companye.png",
+        "membershipLevel": "Gold",
+        "otherInfo": ""
+      },
+      {
+        "name": "Hays City Store & Ice House",
+        "address": "8989 RM 150 Driftwood, TX 78619",
+        "phone": "512-722-3905",
+        "website": "https://hayscitystoretx.com/",
+        "image": "companyf.png",
+        "membershipLevel": "Silver",
+        "otherInfo": ""
+      },
+      {
+        "name": "Kelly's Hill Country Barbeque",
+        "address": "14306 Ranch Road 12 Wimberley, TX 78676",
+        "phone": "512-947-1609",
+        "website": "https://khcbbq.com/",
+        "image": "companyg.png",
+        "membershipLevel": "Bronze",
+        "otherInfo": ""
+      }
+      
+    ]
+  }

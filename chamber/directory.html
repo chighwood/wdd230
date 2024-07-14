@@ -26,45 +26,22 @@
     <nav>
         <button id="hamburger"></button>
         <ul class="navMenu">
-            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="discover.html">Discovery</a></li>
             <li><a href="join.html">Join</a></li>
-            <li><a href="directory.html">Directory</a></li>
+            <li class="active"><a href="directory.html">Directory</a></li>
         </ul>
     </nav>
     <img class="hero" src="images/bluebonnet-meadow.jpeg" alt="hero image">
-    <main>
-        <h2>Wimberley Chamber of Commerce</h2>
-
-        <div class="card1">
-            <h2>Current Events</h2>
-            <p>Space for Events Happening</p>
+    <main id="directory">
+        <div class="container">
+            <h1>Member Directory</h1> 
+            <div class="menu">
+                <button id="grid">᎒᎒᎒ Grid</i></button>
+                <button id="list">📄List</button>
+            </div>
+            <div id="members-box" class="members-grid"></div>
         </div>
-
-        <div class="card2">
-            <h2>Weather</h2>
-            <p></p>
-            <p></p>
-        </div>
-
-        <h2>Companies of the Week</h2>
-        <section class="company1">
-            <h4>1st Company</h4>
-            <img src="images/placeholderimg.png" alt="first company image">
-            <p>Words if needed</p>
-        </section>
-        <section class="company2">
-            <h4>2st Company</h4>
-            <img src="images/placeholderimg.png" alt="second company image">
-            <p>Words if needed</p>
-        </section>
-        <section class="company3">
-            <h4>3st Company</h4>
-            <img src="images/placeholderimg.png" alt="third company image">
-            <p>Words if needed</p>
-        </section>
-
-
     </main>
     <footer>
         <p>&copy; <span id="year"></span> Collin Highwood, WDD 230 Chamber of Commerce Page</p>
@@ -72,6 +49,7 @@
     </footer>
 
     <script src="scripts/getDates.js"></script>
+    <script src="scripts/members.js"> </script>
 
 </body>
 
