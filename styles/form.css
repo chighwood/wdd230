@@ -1,22 +1,28 @@
-/* base.css - for mobile devices */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
 
 :root {
     --primary-color: #205081;
     --secondary-color: #5a5a5a;
-    --light-color: #f0f0f0;
-    --dark-color: #333;
-    --font-family: 'Roboto', sans-serif;
-    --font-size: 16px;
+    --background-color: #f0f0f0;
+    --text-color: #333;
+    --light-text-color: #fff;
+    --highlight-color: #ffc107;
+    --button-hover-color: #0056b3;
+    --form-background: #fff;
+    --form-border-radius: 10px;
+    --form-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    --dark-mode-background: #121212;
+    --dark-mode-text: #fff;
+    --dark-mode-main-bg: #5a5a5a;
+    --dark-mode-header-bg: #1e1e1e;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
-
 body {
-    font-family: var(--font-family);
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--light-color);
-    color: var(--dark-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
@@ -26,7 +32,7 @@ header {
     align-items: center;
     padding: 1rem;
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--light-text-color);
     justify-content: space-between;
 }
 
@@ -51,7 +57,7 @@ nav {
     font-size: 2rem;
     background: none;
     border: none;
-    color: #fff;
+    color: var(--light-text-color);
     cursor: pointer;
     width: 100%;
     text-align: right;
@@ -60,7 +66,7 @@ nav {
 
 #hamburger::before {
     content: "☰";
-    color: #fff;
+    color: var(--light-text-color);
 }
 
 #hamburger.active::before {
@@ -86,7 +92,7 @@ nav ul li a {
     font-size: 1.5rem;
     display: block;
     padding: 1rem;
-    color: #fff;
+    color: var(--light-text-color);
     text-decoration: none;
     text-align: center;
 }
@@ -96,7 +102,7 @@ footer {
     text-align: center;
     padding: 1rem;
     background-color: var(--primary-color);
-    color: #fff;
+    color: var(--light-text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,7 +118,7 @@ footer span#year {
 }
 
 footer #lastModified {
-    color: #ffc107;
+    color: var(--highlight-color);
     margin-top: 5px;
 }
 
@@ -129,19 +135,19 @@ footer #lastModified {
 }
 
 body.dark-mode {
-    background-color: #121212;
-    color: #fff;
+    background-color: var(--dark-mode-background);
+    color: var(--dark-mode-text);
 }
 
 main.dark-mode {
-    background-color: var(--secondary-color);
+    background-color: var(--dark-mode-main-bg);
 }
 
 header.dark-mode,
 nav.dark-mode,
 footer.dark-mode {
-    background-color: #1e1e1e;
-    color: #fff;
+    background-color: var(--dark-mode-header-bg);
+    color: var(--dark-mode-text);
 }
 
 main {
@@ -164,9 +170,9 @@ main h2 {
 form {
     width: 400px;
     padding: 30px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    background-color: var(--form-background);
+    border-radius: var(--form-border-radius);
+    box-shadow: var(--form-shadow);
     justify-content: center;
     margin: 5px;
     margin-bottom: 10px;
@@ -189,7 +195,7 @@ form input[type="range"],
 form button[type="submit"] {
     width: 100%;
     padding: 10px;
-    font-size: var(--font-size);
+    font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -201,8 +207,8 @@ form .note {
 }
 
 form button[type="submit"] {
-    background-color: #0c56a5;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
     border: none;
     cursor: pointer;
     padding: 15px;
@@ -212,7 +218,7 @@ form button[type="submit"] {
 }
 
 form button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: var(--button-hover-color);
 }
 
 .record-p {
@@ -221,4 +227,139 @@ form button[type="submit"]:hover {
     display: block;
     text-align: center;
     justify-content: center;
-    background
+    background: rgba(255, 255, 255, 0.3);
+    border: #121212 solid 1px;
+    padding: 20px;
+}
+
+/* Form Page */
+.join input:required {
+    border-right: solid 5px red;
+}
+
+.join input:required:valid {
+    border-bottom: solid 5px green;
+}
+
+/* larger.css - for wider screens */
+@media (min-width: 768px) {
+
+    header {
+        text-align: center;
+    }
+
+    header img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    header span {
+        margin: auto auto;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    /* Navigation Flexbox */
+    ul.navMenu,
+    ul.navMenu.active {
+        display: flex;
+        flex-direction: row;
+        box-shadow: none;
+        width: auto;
+        justify-content: space-around;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus,
+    nav ul li a:active {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Main Section Grid */
+    main {
+        max-width: 1500px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    main h1 {
+        text-align: center;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 0.5rem;
+        grid-column: span 2;
+        margin-top: 0;
+    }
+
+    form {
+        width: 400px;
+        /* Adjust width as needed */
+        padding: 30px;
+        background-color: var(--form-background);
+        border-radius: var(--form-border-radius);
+        box-shadow: var(--form-shadow);
+        margin: auto;
+        margin-bottom: 30px;
+    }
+
+    form>div {
+        margin-bottom: 10px;
+    }
+
+    form label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    form input[type="text"],
+    form input[type="password"],
+    form input[type="email"],
+    form input[type="range"],
+    form button[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+    form .note {
+        font-size: 12px;
+        color: #666;
+    }
+
+    form button[type="submit"] {
+        background-color: var(--primary-color);
+        color: var(--light-text-color);
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+    form button[type="submit"]:hover {
+        background-color: var(--button-hover-color);
+    }
+
+    /* Record CSS */
+    .record-p {
+        margin-left: 30%;
+        margin-right: 30%;
+        display: block;
+        text-align: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.3);
+        border: #121212 solid 2px;
+        padding: 30px;
+    }
+}
+
+
+
