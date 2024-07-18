@@ -136,7 +136,8 @@ footer.dark-mode {
 }
 
 main {
-    max-width: 1400px;
+    margin: 1rem auto;
+    max-width: 1000px;
     gap: 1rem;
 }
 
@@ -215,6 +216,15 @@ form button[type="submit"]:hover {
     border: #121212 solid 1px;
     padding: 20px;
 
+}
+
+/* Form Page */
+.join input:required {
+    border-right: solid 5px red;
+}
+
+.join input:required:valid {
+    border-bottom: solid 5px green;
 }
 
 /* larger.css - for wider screens */
