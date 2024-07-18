@@ -1,0 +1,81 @@
+{
+    "weeks": [
+    {
+        "week": "Week 1",
+        "links": [
+        {
+            "url": "week01/holygrail.html",
+            "title": "HG Layout"
+        }
+        ]
+    },
+    {
+        "week": "Week 2",
+        "links": [
+        {
+            "url": "week02/bom.html",
+            "title": "Book of Mormon"
+        },
+        {
+            "url": "week02/design.html",
+            "title": "Chamber Design"
+        }
+        ]
+    },
+    {
+        "week": "Week 3",
+        "links": [
+        {
+            "url": "week03/bom.html",
+            "title": "BOM"
+        },
+        {
+            "url": "week03/lazyload.html",
+            "title": "Lazy Load"
+        },
+        {
+            "url": "week03/responsive-images.html",
+            "title": "Responsive Images"
+        }
+        ]
+    },
+    {
+        "week": "Week 4",
+        "links": [
+        {
+            "url": "https://codepen.io/chighwood/pen/OJeLPLL",
+            "title": "CSS Psuedo"
+        },
+        {
+            "url": "https://imgur.com/ztHSBTV",
+            "title": "CSS Combinators"
+        },
+        {
+            "url": "week04/index.html",
+            "title": "Form Activity"
+        }
+        ]
+    },
+    {
+        "week": "Week 5",
+        "links": [
+        {
+            "url": "https://codepen.io/chighwood/pen/yLdNYeq",
+            "title": "Codepen"
+        },
+        {
+            "url": "week05/new-ward-members.json",
+            "title": "JSON"
+        },
+        {
+            "url": "week05/prophets.html",
+            "title": "Prophets"
+        },
+        {
+            "url": "week05/weather.html",
+            "title": "Weather"
+        }
+        ]
+    }
+    ]
+}
