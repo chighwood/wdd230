@@ -37,6 +37,7 @@
 
     /* Main Section Grid */
     main {
+        max-width: 1400px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
