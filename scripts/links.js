@@ -7,7 +7,6 @@ async function getLinks() {
     displayLinks(data);
   }
   
-  getLinks();
 
 function displayLinks(weeks) {
   const linksContainer = document.getElementById('links');
@@ -38,3 +37,5 @@ function displayLinks(weeks) {
     linksContainer.appendChild(weekDiv);
   });
 }
+
+getLinks();
