@@ -1,10 +1,10 @@
 const baseURL = "https://chighwood.github.io/wdd230/";
-const linksURL = "https://chighwood.github.io/wdd230/data/links.json";
+const linksURL = `${baseURL}data/links.json`;
 
 async function getLinks() {
     const response = await fetch(linksURL);
     const data = await response.json();
-    displayLinks(data.weeks); // Access the weeks array
+    displayLinks(data.weeks);
 }
 
 function displayLinks(weeks) {
@@ -12,15 +12,19 @@ function displayLinks(weeks) {
     linksContainer.innerHTML = '';
 
     weeks.forEach(week => {
-        const weekDiv = document.createElement('div');
-        const weekHeader = document.createElement('h3');
-        weekHeader.textContent = week.week;
-        weekDiv.appendChild(weekHeader);
+        const weekRow = document.createElement('div');
+        weekRow.classList.add('week-row');
 
-        const weekLinks = document.createElement('ul');
+        const weekHeader = document.createElement('div');
+        weekHeader.classList.add('week-header');
+        weekHeader.textContent = week.week;
+        weekRow.appendChild(weekHeader);
+
+        const weekLinks = document.createElement('div');
+        weekLinks.classList.add('week-links');
 
         week.links.forEach((link, index) => {
-            const linkItem = document.createElement('li');
+            const linkItem = document.createElement('span');
             const linkAnchor = document.createElement('a');
             linkAnchor.href = link.url.startsWith('http') ? link.url : baseURL + link.url;
             linkAnchor.textContent = link.title;
@@ -29,12 +33,12 @@ function displayLinks(weeks) {
 
             if (index < week.links.length - 1) {
                 const separator = document.createTextNode(' | ');
-                linkItem.appendChild(separator);
+                weekLinks.appendChild(separator);
             }
         });
 
-        weekDiv.appendChild(weekLinks);
-        linksContainer.appendChild(weekDiv);
+        weekRow.appendChild(weekLinks);
+        linksContainer.appendChild(weekRow);
     });
 }
 
