@@ -2,11 +2,17 @@ const baseURL = "https://chighwood.github.io/wdd230/";
 const linksURL = "https://chighwood.github.io/wdd230/data/links.json";
 
 async function getLinks() {
-    const response = await fetch(linksURL);
-    const data = await response.json();
-    displayLinks(data);
-  }
-  
+    try {
+        const response = await fetch(linksURL);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        displayLinks(data);
+    } catch (error) {
+        console.error('Fetch error: ', error);
+    }
+}
 
 function displayLinks(weeks) {
   const linksContainer = document.getElementById('links');
@@ -19,7 +25,7 @@ function displayLinks(weeks) {
     weekDiv.appendChild(weekHeader);
 
     const weekLinks = document.createElement('ul');
-    week.links.forEach(link => {
+    week.links.forEach((link, index) => {
       const linkItem = document.createElement('li');
       const linkAnchor = document.createElement('a');
       linkAnchor.href = baseURL + link.url;
@@ -35,7 +41,8 @@ function displayLinks(weeks) {
 
     weekDiv.appendChild(weekLinks);
     linksContainer.appendChild(weekDiv);
-
-    getLinks();
   });
 }
+
+getLinks();
+
