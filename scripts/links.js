@@ -35,7 +35,7 @@ function displayLinks(weeks) {
 
     weekDiv.appendChild(weekLinks);
     linksContainer.appendChild(weekDiv);
+
+    getLinks();
   });
 }
-
-getLinks();
