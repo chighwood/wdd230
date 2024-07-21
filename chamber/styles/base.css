@@ -335,10 +335,8 @@ textarea {
 
 .description {
     width: 30%;
-    /* Width of the sidebar */
     max-width: 300px;
     margin-left: 20px;
-    /* Space between form and sidebar */
     background-color: tan;
     padding: 1rem;
     border-radius: 8px;
@@ -355,13 +353,64 @@ textarea {
     gap: 20px;
     padding: 1rem;
   }
-  
-/* .members-list {
-/* Define styles for list view */
+
+/* Directory Button */
+
+.menu button {
+    padding: 15px;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    margin: 5px;
+}
+/* Card Style */
+
+.container h1 {
+    padding: 10px;
+}
 
 .member-card {
 background-color: #f0f0f0;
 padding: 20px;
 border-radius: 8px;
-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 }
+
+.members-list {
+    display: flex;
+    flex-direction: column;
+}
+.members-grid .member-item {
+    align-items: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+.members-list section {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin: 0;
+    padding: 0.25rem;
+}
+
+.members-list section > * {
+    margin: 0 1rem;
+}
+
+.members-list section img {
+    display: none; /* smaller viewports only */
+}
+
+.members-list section h3 {
+    font-size: 1rem;
+    font-family: Roboto, Helvetica, sans-serif;
+}
+
+.members-list .member-item:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+
