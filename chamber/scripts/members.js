@@ -1,44 +1,73 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const membersBox = document.getElementById('members-box');
+  const gridButton = document.getElementById('grid');
+  const listButton = document.getElementById('list');
+  const membersURL = 'data/members.json';
 
-async function displayMembers() {
-    try {
-      const response = await fetch('data/members.json');
-      const data = await response.json();
-  
-      const members = data.members;
-  
-      const membersContainer = document.getElementById('members-box');
-      membersContainer.innerHTML = '';
-  
-      members.forEach(member => {
-        const memberCard = document.createElement('div');
-        memberCard.classList.add('member-card');
-  
-        memberCard.innerHTML = `
-          <img src="images/${member.image}" alt="${member.name}">
-          <h3>${member.name}</h3>
-          <p><strong>Address:</strong> ${member.address}</p>
-          <p><strong>Phone:</strong> ${member.phone}</p>
-          <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
-          <p><strong>Membership Level:</strong> ${member.membershipLevel}</p>
-          <p>${member.otherInfo}</p>
-        `;
-  
-        membersContainer.appendChild(memberCard);
-      });
-    } 
-    catch (error) {
-      console.error('Error fetching or parsing JSON data:', error);
-    }
+  async function fetchMembers() {
+      try {
+          const response = await fetch(membersURL);
+          if (!response.ok) {
+              throw new Error('Network response was not ok');
+          }
+          const data = await response.json();
+          return data.members;
+      } catch (error) {
+          console.error('Fetch error: ', error);
+      }
   }
 
-  document.getElementById('grid').addEventListener('click', function() {
-    document.getElementById('members-box').classList.remove('members-list');
-    document.getElementById('members-box').classList.add('members-grid');
+  function displayGrid(members) {
+      membersBox.className = 'members-grid';
+      membersBox.innerHTML = '';
+      members.forEach(member => {
+          const memberItem = document.createElement('div');
+          memberItem.className = 'member-item';
+          memberItem.innerHTML = `
+              <img src="images/${member.image}" alt="${member.name}">
+              <h2>${member.name}</h2>
+              <p>${member.address}</p>
+              <p>${member.phone}</p>
+              <a href="${member.website}" target="_blank">Website</a>
+              <p>${member.membershipLevel}</p>
+          `;
+          membersBox.appendChild(memberItem);
+      });
+  }
+
+  function displayList(members) {
+      membersBox.className = 'members-list';
+      membersBox.innerHTML = '';
+      members.forEach(member => {
+          const memberItem = document.createElement('div');
+          memberItem.className = 'member-item';
+          memberItem.innerHTML = `
+              <div>
+                  <h2>${member.name}</h2>
+                  <p>${member.address}</p>
+                  <p>${member.phone}</p>
+                  <a href="${member.website}" target="_blank">Website</a>
+                  <p>${member.membershipLevel}</p>
+              </div>
+              <img src="images/${member.image}" alt="${member.name}">
+          `;
+          membersBox.appendChild(memberItem);
+      });
+  }
+
+  gridButton.addEventListener('click', async () => {
+      const members = await fetchMembers();
+      displayGrid(members);
   });
-  
-  document.getElementById('list').addEventListener('click', function() {
-    document.getElementById('members-box').classList.remove('members-grid');
-    document.getElementById('members-box').classList.add('members-list');
+
+  listButton.addEventListener('click', async () => {
+      const members = await fetchMembers();
+      displayList(members);
   });
-  
-  displayMembers();
+
+  // Default display
+  (async () => {
+      const members = await fetchMembers();
+      displayGrid(members);
+  })();
+});

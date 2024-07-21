@@ -1,4 +1,3 @@
-
 const apiKey = '69f0c9ec198f3702b457ba969bcf2b7c';
 const city = 'Wimberley';
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;

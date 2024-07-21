@@ -43,8 +43,12 @@
 
         <div class="card2">
             <h2>Weather</h2>
-            <p></p>
-            <p></p>
+            <div id="current-weather">
+                <div id="temperature"></div>
+                <div id="description"></div>
+                <div id="weather-icon"></div>
+                <div id="forecast"></div>
+            </div>
         </div>
 
         <h2>Companies of the Week</h2>
@@ -63,15 +67,14 @@
             <img src="images/placeholderimg.png" alt="third company image">
             <p>Words if needed</p>
         </section>
-
-
     </main>
     <footer>
-        <p>&copy; <span id="year"></span> Collin Highwood, WDD 230 Chamber of Commerce Page</p>
+        <p>&copy; <span id="year"></span>Collin Highwood, WDD 230 Chamber of Commerce Page</p>
         <p id="lastModified"></p>
     </footer>
 
     <script src="scripts/getDates.js"></script>
+    <script src="scripts/weather.js"></script>
 
 </body>
 
