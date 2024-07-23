@@ -354,6 +354,10 @@ textarea {
     padding: 1rem;
   }
 
+  #current-weather #forecast {
+    border: 2px dotted black;
+  }
+
 /* Directory Button */
 
 .menu button {
