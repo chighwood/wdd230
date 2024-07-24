@@ -1,4 +1,4 @@
-const membersURL = 'chamber/data/members.json';
+const membersURL = 'data/members.json';
 
 async function getMembers() {
     try {
@@ -7,6 +7,7 @@ async function getMembers() {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
+        console.log('Members data fetched:', data); // Debugging
         displayRandomCompanies(data.members);
     } catch (error) {
         console.error('Fetch error: ', error);
@@ -14,7 +15,9 @@ async function getMembers() {
 }
 
 function displayRandomCompanies(members) {
+    console.log('All members:', members); // Debugging
     const filteredMembers = members.filter(member => member.membershipLevel !== 'Bronze');
+    console.log('Filtered members:', filteredMembers); // Debugging
 
     if (filteredMembers.length < 3) {
         console.error('Not enough members with Silver or above membership level');
@@ -22,6 +25,7 @@ function displayRandomCompanies(members) {
     }
 
     const selectedMembers = getRandomUniqueMembers(filteredMembers, 3);
+    console.log('Selected members:', selectedMembers); // Debugging
 
     updateCompanySection('company1', selectedMembers[0]);
     updateCompanySection('company2', selectedMembers[1]);
@@ -33,12 +37,23 @@ function getRandomUniqueMembers(array, count) {
     return shuffled.slice(0, count);
 }
 
-function updateCompanySection(sectionId, member) {
-    const section = document.querySelector(`.${sectionId}`);
-    section.querySelector('h4').textContent = member.name;
-    section.querySelector('img').src = `images/${member.image}`;
-    section.querySelector('img').alt = `${member.name} image`;
-    section.querySelector('p').textContent = member.address;
+function updateCompanySection(sectionClass, member) {
+    const section = document.querySelector(`.${sectionClass}`);
+    console.log(`Updating section ${sectionClass} with member:`, member); // Debugging
+    if (!section) {
+        console.error(`Section with class ${sectionClass} not found`);
+        return;
+    }
+    const h4 = section.querySelector('h4');
+    const p = section.querySelector('p');
+
+    if (!h4 || !p) {
+        console.error(`Missing elements in section ${sectionClass}`);
+        return;
+    }
+
+    h4.textContent = member.name;
+    p.textContent = member.address;
 }
 
 getMembers();

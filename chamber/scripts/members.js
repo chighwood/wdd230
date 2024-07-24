@@ -24,12 +24,11 @@ document.addEventListener('DOMContentLoaded', () => {
           const memberItem = document.createElement('div');
           memberItem.className = 'member-item';
           memberItem.innerHTML = `
-              <img src="images/${member.image}" alt="${member.name}">
               <h2>${member.name}</h2>
               <p>${member.address}</p>
               <p>${member.phone}</p>
               <a href="${member.website}" target="_blank">Website</a>
-              <p>${member.membershipLevel}</p>
+              <p>Membership: ${member.membershipLevel}</p>
           `;
           membersBox.appendChild(memberItem);
       });
@@ -47,9 +46,8 @@ document.addEventListener('DOMContentLoaded', () => {
                   <p>${member.address}</p>
                   <p>${member.phone}</p>
                   <a href="${member.website}" target="_blank">Website</a>
-                  <p>${member.membershipLevel}</p>
+                  <p>Membership:<br>${member.membershipLevel}</p>
               </div>
-              <img src="images/${member.image}" alt="${member.name}">
           `;
           membersBox.appendChild(memberItem);
       });
@@ -65,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
       displayList(members);
   });
 
-  // Default display
   (async () => {
       const members = await fetchMembers();
       displayGrid(members);

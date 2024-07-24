@@ -11,7 +11,7 @@ fetch(apiUrl)
         const weatherIcon = document.getElementById('weather-icon');
         const forecastContainer = document.getElementById('forecast');
 
-        const temp = currentWeather.main.temp;
+        const temp = Math.round(currentWeather.main.temp);
         const weatherDesc = currentWeather.weather[0].description;
         const iconCode = currentWeather.weather[0].icon;
         const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
@@ -27,30 +27,46 @@ fetch(apiUrl)
         temperature.innerText = `Temperature: ${temp}°F - ${capitalizedDesc}`;
         weatherIcon.innerHTML = `<img src="${iconUrl}" alt="${weatherDesc}">`;
 
-        // Process 3-day forecast (next 3 days after the current day, 24-hour interval)
-        let dayCount = 0;
-        for (let i = 8; i < data.list.length; i += 8) {
-            if (dayCount === 3) break;
+        const dailyForecasts = {};
 
-            const forecast = data.list[i];
-            const date = new Date(forecast.dt * 1000);
-            const day = date.toLocaleDateString(undefined, { weekday: 'long' });
-            const forecastTemp = forecast.main.temp;
-            const forecastDesc = capitalizeWords(forecast.weather[0].description);
-            const forecastIconCode = forecast.weather[0].icon;
+        data.list.forEach(item => {
+            const date = new Date(item.dt * 1000);
+            const day = date.toLocaleDateString(undefined, { weekday: 'long', year: 'numeric', month: 'numeric', day: 'numeric' });
+            if (!dailyForecasts[day]) {
+                dailyForecasts[day] = [];
+            }
+            dailyForecasts[day].push(item);
+        });
+
+        const forecastDays = Object.keys(dailyForecasts).slice(1, 4);
+        forecastDays.forEach(day => {
+            const forecasts = dailyForecasts[day];
+            let maxTemp = -Infinity;
+            let forecastDesc = '';
+            let forecastIconCode = '';
+
+            forecasts.forEach(forecast => {
+                if (forecast.main.temp > maxTemp) {
+                    maxTemp = forecast.main.temp;
+                    forecastDesc = forecast.weather[0].description;
+                    forecastIconCode = forecast.weather[0].icon;
+                }
+            });
+
+            maxTemp = Math.round(maxTemp);  
+
+            const capitalizedDesc = capitalizeWords(forecastDesc);
             const forecastIconUrl = `http://openweathermap.org/img/wn/${forecastIconCode}@2x.png`;
 
             const forecastElement = document.createElement('div');
             forecastElement.innerHTML = `
                 <div>
                     <h3>${day}</h3>
-                    <img src="${forecastIconUrl}" alt="${forecastDesc}">
-                    <p>${forecastTemp}°F - ${forecastDesc}</p>
+                    <img src="${forecastIconUrl}" alt="${capitalizedDesc}">
+                    <p>${maxTemp}°F - ${capitalizedDesc}</p>
                 </div>
             `;
             forecastContainer.appendChild(forecastElement);
-
-            dayCount++;
-        }
+        });
     })
     .catch(error => console.error('Error fetching the weather data:', error));
