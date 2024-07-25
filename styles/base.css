@@ -24,8 +24,7 @@ main {
     gap: 1rem;
 }
 
-.card1,
-.card2 {
+.card1, .card2 {
     margin-bottom: 0.5rem;
     padding: 0.5rem;
     background-color: #e9eef5;
@@ -37,8 +36,7 @@ main {
     text-align: center;
 }
 
-.card1 h2,
-.card2 h2 {
+.card1 h2, .card2 h2 {
     background-color: #205081;
     color: #fff;
     padding: 0.5rem;
@@ -79,7 +77,6 @@ main {
 .week-links a:hover {
     text-decoration: underline;
     font-size: large;
-
 }
 
 /* Header */
@@ -132,7 +129,7 @@ ul.navMenu {
     display: none;
     list-style-type: none;
     padding: 1rem;
-    margin: 0 0 0 0;
+    margin: 0;
 }
 
 ul.navMenu.active {
@@ -245,9 +242,7 @@ main.dark-mode {
     background-color: #5a5a5a;
 }
 
-header.dark-mode,
-nav.dark-mode,
-footer.dark-mode {
+header.dark-mode, nav.dark-mode, footer.dark-mode {
     background-color: #1e1e1e;
     color: #fff;
 }
@@ -262,5 +257,6 @@ footer.dark-mode {
     width: 100px;
     height: 100px;
 }
+
 
 

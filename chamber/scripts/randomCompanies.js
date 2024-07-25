@@ -42,7 +42,7 @@ function updateCompanySection(sectionClass, member) {
 
     const h4 = section.querySelector('h4');
     const p = section.querySelector('p');
-    const p2 = section.querySelector('p2');
+    const p2 = section.querySelector('email');
 
     if (!h4 || !p) {
         console.error(`Missing elements in section ${sectionClass}`);
