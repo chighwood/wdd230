@@ -9,7 +9,7 @@ fetch(apiUrl)
         const description = document.getElementById('description');
         const weatherIcon = document.getElementById('weather-icon');
 
-        const temp = data.main.temp;
+        const temp = Math.round(data.main.temp);
         const weatherDesc = data.weather[0].description;
         const iconCode = data.weather[0].icon;
         const iconUrl = `http://openweathermap.org/img/wn/${iconCode}@2x.png`;
