@@ -217,16 +217,6 @@ main h1 {
     margin-bottom: 1rem;
 }
 
-.course-links li a {
-    color: #205081;
-    text-decoration: none;
-}
-
-.course-links li a:hover {
-    text-decoration: underline;
-    font-size: larger;
-}
-
 /* Google Ad */
 .google {
     position: relative;

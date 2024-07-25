@@ -113,6 +113,14 @@ main {
     width: 100%;
 }
 
+.card1 img {
+    display: block;
+    width: 70%;
+    margin: auto;
+    margin-top: 2rem;
+
+}
+
 .card1,
 .card2 {
     margin-bottom: 1rem;
@@ -368,6 +376,10 @@ textarea {
     box-shadow: 0 0 10px rgba(0, 0, 0, .3);
     margin: 5px;
 }
+
+.menu button a:hover {
+    font-size: larger;
+}
 /* Card Style */
 
 .container h1 {
@@ -422,6 +434,7 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
 
 .banner {
     display: none;
+    width: auto;
     background-color: tan;
     color: #000;
     padding: 10px;
