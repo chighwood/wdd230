@@ -308,6 +308,7 @@ textarea {
     cursor: pointer;
     max-width: 400px;
     box-shadow: 1px 1px 4px #999;
+    margin-top: 10px;
 }
 
 .join input:required {
