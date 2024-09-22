@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collin Highwood - Wimberley Chamber of Commerce</title>
+    <meta name="description" content="Collin Highwood's WDD 230 - Web Frontend Development of Chamber of Commerce.">
+    <meta name="author" content="Collin Highwood">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Wimberly Chamber of Commerce">
+    <meta property="og:type" content="Home page for Wimberley Chamber Site">
+    <meta property="og:image" content="https://wimberley.org/wp-content/uploads/wimberleyWelcome.jpg">
+    <meta property="og:url" content="https://chighwood.github.io/wdd230/chamber">
+</head>
+
+<body>
+    <header>
+        <img src="images/boot1.jpg" alt="boot 1">
+        <span>Wimberley Chamber of Commerce</span>
+        <img src="images/boot2.jpeg" alt="boot 2">
+
+    </header>
+    <nav>
+        <button id="hamburger"></button>
+        <ul class="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discovery.html">Discovery</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li class="active"><a href="directory.html">Directory</a></li>
+        </ul>
+    </nav>
+    <img class="hero" src="images/bluebonnet-meadow.jpeg" alt="hero image">
+    <main id="directory">
+        <div class="container">
+            <h1>Member Directory</h1> 
+            <div class="menu">
+                <button id="grid">᎒᎒᎒ Grid</button>
+                <button id="list">📄List</button>
+            </div>
+            <div id="members-box" class="members-grid"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Collin Highwood, WDD 230 Chamber of Commerce Page</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/members.js"> </script>
+
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collin Highwood - WDD 230 - Web Frontend Development</title>
+    <meta name="description"
+        content="Collin Highwood's WDD 230 - Web Frontend Development course assignment portal. School assignments to help better understand how to create active Web Pages.">
+    <meta name="author" content="Collin Highwood">
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="WDD Home Page">
+    <meta property="og:type" content="Home page for the WDD230 Block 2 Class with Chamber Site">
+    <meta property="og:image" content="https://wimberley.org/wp-content/uploads/wimberleyWelcome.jpg">
+    <meta property="og:url" content="https://chighwood.github.io/wdd230/">
+</head>
+
+<body>
+    <header>
+        <img src="images/School.webp" alt="My Picture">
+        <span>Collin Highwood</span>
+    </header>
+    <button id="mode" aria-label="Dark Mode">🕶️</button>
+    <nav>
+        <button id="hamburger"></button>
+        <ul class="navMenu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="chamber/index.html">Chamber of Commerce</a></li>
+            <li><a href="week01/chamber-site-plan.html">Site Plan</a></li>
+            <li><a href="form.html">Form</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(max-width: 400px)" srcset="week03/images/hero-small.webp">
+                <img src="week03/images/hero-large.webp" alt="hero image" width="960" height="480">
+            </picture>
+            <p>Mount Timpanogos Temple</p>
+        </div>
+
+        <h1>WDD 230: Web Frontend Development</h1>
+
+        <section>
+            <div class="card1">
+                <h2>Learning Activities</h2>
+                <div id="links"></div>
+            </div>
+        </section>
+
+        <div class="card2">
+            <h2>Current Weather</h2>
+            <div id="weather-icon"></div>
+            <p id="temperature"></p>
+            <p id="description"></p>
+            <p><span class="label">Visit Count: </span><span class="visits"></span></p>
+        </div>
+        <iframe class="google"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d55377.903722506926!2d-97.9861504!3d29.831987199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1719542732962!5m2!1sen!2sus"
+            width="600" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Collin Highwood, United States of America</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/darkMode.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/links.js"></script>
+
+</body>
+
+</html>

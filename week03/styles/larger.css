@@ -1,0 +1,7 @@
+@media (min-width: 768px) {
+    main .images {
+        display: grid;
+        grid-template-rows: 1fr;
+        gap: 1rem;
+    }
+}

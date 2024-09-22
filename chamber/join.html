@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collin Highwood - Wimberley Chamber of Commerce</title>
+    <meta name="description" content="Collin Highwood's WDD 230 - Web Frontend Development of Chamber of Commerce.">
+    <meta name="author" content="Collin Highwood">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Wimberly Chamber of Commerce">
+    <meta property="og:type" content="Home page for Wimberley Chamber Site">
+    <meta property="og:image" content="https://wimberley.org/wp-content/uploads/wimberleyWelcome.jpg">
+    <meta property="og:url" content="https://chighwood.github.io/wdd230/chamber">
+</head>
+
+<body>
+    <header>
+        <img src="images/boot1.jpg" alt="boot 1">
+        <span>Wimberley Chamber of Commerce</span>
+        <img src="images/boot2.jpeg" alt="boot 2">
+
+    </header>
+    <nav>
+        <button id="hamburger"></button>
+        <ul class="navMenu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="discovery.html">Discovery</a></li>
+            <li class="active"><a href="join.html">Join</a></li>
+            <li><a href="directory.html">Directory</a></li>
+        </ul>
+    </nav>
+    <img class="hero" src="images/bluebonnet-meadow.jpeg" alt="hero image">
+    <main class="main-join">
+        <section id="membership-form">
+            <h1>Join Us</h1>
+            <form action="thankyou.html" method="get" class="join">
+                <fieldset>
+                    <legend>Membership Application</legend>
+                    
+                    <label for="firstName">Applicant's First Name:<input type="text" id="firstName" name="firstName" required></label>
+                    <label for="lastName">Applicant's Last Name:<input type="text" id="lastName" name="lastName" required></label>
+                    <label for="position">Applicant's Title/Position:<input type="text" id="position" name="position" pattern="[A-Za-z -]{7,}" title="Only letters, hyphens, and spaces, minimum 7 characters" required></label>
+                    <label for="email">Email Address:<input type="email" id="email" name="email" placeholder="example@example.com" required></label>
+                    <label for="phone">Phone Number:<input type="tel" id="phone" name="phone" required></label>
+                    <label for="organization">Business/Organization's Name:<input type="text" id="organization" name="organization" required></label>
+                    <label for="membershipLevel">Membership Level:</label>
+
+                    <select id="membershipLevel" name="membershipLevel" required>
+                        <option value="">Select &#9662;</option>
+                        <option value="NP">Non-Profit (No Fee)</option>
+                        <option value="Bronze">Bronze Membership</option>
+                        <option value="Silver">Silver Membership</option>
+                        <option value="Gold">Gold Membership</option>
+                    </select>
+                    
+                    <label for="description">Business/Organization's Description:</label>
+                    <textarea id="description" name="description"></textarea>
+                    
+                    <input type="hidden" id="timestamp" name="timestamp" value="">
+
+                    <input type="submit" value="Submit Application">
+                </fieldset>
+            </form>
+        </section>
+
+        <aside id="membership-benefits">
+            <h2>Membership Benefits</h2><br>
+            <ul>
+                <li><strong>Non-Profit:</strong> No membership fee, community support</li>
+                <li><strong>Bronze:</strong> Basic listing, event discounts</li>
+                <li><strong>Silver:</strong> Enhanced listing, advertising opportunities</li>
+                <li><strong>Gold:</strong> Premium listing, spotlight events, exclusive discounts</li>
+            </ul>
+        </aside>
+        
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> Collin Highwood, WDD 230 Chamber of Commerce Page</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+
+</body>
+
+</html>

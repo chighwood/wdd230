@@ -1,0 +1,93 @@
+/* larger.css - for wider screens */
+
+@media (min-width: 768px) {
+
+    header {
+        text-align: center;
+    }
+
+    header img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    header span {
+        margin: auto auto;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    /* Navigation Flexbox */
+    ul.navMenu,
+    ul.navMenu.active {
+        display: flex;
+        flex-direction: row;
+        box-shadow: none;
+        width: auto;
+        justify-content: space-around;
+    }
+
+    nav ul li a:hover,
+    nav ul li a:focus,
+    nav ul li a:active {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Main Section Grid */
+    main {
+        max-width: 1400px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin: 1rem auto;
+    }
+
+    main h1 {
+        text-align: center;
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: 0.5rem;
+        grid-column: span 2;
+        margin-top: 0;
+    }
+
+    .hero {
+        width: 100%;
+        height: auto;
+        grid-column: span 2;
+    }
+
+    .hero p {
+        font-size: 2rem;
+    }
+
+    .card1, .card2 {
+        width: 90%;
+        margin: 1rem;
+    }
+
+    .course-links li {
+        margin-bottom: 1.5rem;
+    }
+
+    .google {
+        grid-column: span 2;
+        height: 40rem;
+    }
+
+    /* Record CSS */
+
+    .record-p {
+        margin-left: 30%;
+        margin-right: 30%;
+        display: block;
+        text-align: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.3);
+        border: #121212 solid 2px;
+        padding: 30px;
+
+    }
+}

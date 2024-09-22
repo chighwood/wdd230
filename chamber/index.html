@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collin Highwood - Wimberley Chamber of Commerce</title>
+    <meta name="description" content="Collin Highwood's WDD 230 - Web Frontend Development of Chamber of Commerce.">
+    <meta name="author" content="Collin Highwood">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css" media="screen and (min-width: 768px)">
+    <link rel="icon" href="favicon.ico">
+    <meta property="og:title" content="Wimberly Chamber of Commerce">
+    <meta property="og:type" content="Home page for Wimberley Chamber Site">
+    <meta property="og:image" content="https://wimberley.org/wp-content/uploads/wimberleyWelcome.jpg">
+    <meta property="og:url" content="https://chighwood.github.io/wdd230/chamber">
+</head>
+
+<body>
+    <div id="banner" class="banner">
+        <p>Join us for the Meet and Greet on Wednesday at 7:00 PM!<button id="close-banner">❌</button></p>
+    </div>
+
+    <header>
+        <img src="images/boot1.jpg" alt="boot 1">
+        <span>Wimberley Chamber of Commerce</span>
+        <img src="images/boot2.jpeg" alt="boot 2">
+
+    </header>
+    <nav>
+        <button id="hamburger"></button>
+        <ul class="navMenu">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="discovery.html">Discovery</a></li>
+            <li><a href="join.html">Join</a></li>
+            <li><a href="directory.html">Directory</a></li>
+        </ul>
+    </nav>
+    <img class="hero" src="images/bluebonnet-meadow.jpeg" alt="hero image">
+    <main>
+        <h2>Wimberley Chamber of Commerce</h2>
+
+        <div class="card1">
+            <h2>Current Events</h2>
+            <img src="images/wimberly-dates.png" alt="market-days" loading="lazy">
+            
+        </div>
+
+        <div class="card2">
+            <h2>Weather</h2>
+            <div id="current-weather">
+                <div id="temperature"></div>
+                <div id="description"></div>
+                <div id="weather-icon"></div>
+                <div id="forecast"></div>
+            </div>
+        </div>
+
+        <h2>Companies of the Week</h2>
+        <section class="company1">
+            <h4>company1</h4><br>
+            <p>address</p><br>
+        </section>
+        <section class="company2">
+            <h4>company2</h4><br>
+            <p>address</p><br>
+        </section>
+        <section class="company3">
+            <h4>company3</h4><br>
+            <p>address</p><br>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span>Collin Highwood, WDD 230 Chamber of Commerce Page</p>
+        <p id="lastModified"></p>
+    </footer>
+
+    <script src="scripts/getDates.js"></script>
+    <script src="scripts/weather.js"></script>
+    <script src="scripts/randomCompanies.js"></script>
+    <script src="scripts/banner.js"></script>
+
+
+</body>
+
+</html>
